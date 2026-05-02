@@ -10,7 +10,7 @@ export const createScholarship = createAsyncThunk(
     "scholarship/create",
     async (formData, { rejectWithValue }) => {
         try {
-            const res = await API.post("/scholarship", formData);
+            const res = await API.post("/scholarship/create", formData);
             return res.data;
         } catch (err) {
             return rejectWithValue(err.response?.data);
@@ -25,7 +25,7 @@ export const getScholarships = createAsyncThunk(
     "scholarship/getAll",
     async (_, { rejectWithValue }) => {
         try {
-            const res = await API.get("/scholarship");
+            const res = await API.get("/scholarship/all");
             return res.data;
         } catch (err) {
             return rejectWithValue(err.response?.data);
@@ -40,7 +40,7 @@ export const deleteScholarship = createAsyncThunk(
     "scholarship/delete",
     async (id, { rejectWithValue }) => {
         try {
-            await API.delete(`/scholarship/${id}`);
+            await API.delete(`/scholarship/delete/${id}`);
             return id;
         } catch (err) {
             return rejectWithValue(err.response?.data);
