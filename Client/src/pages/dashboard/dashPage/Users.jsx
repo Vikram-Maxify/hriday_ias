@@ -1,47 +1,52 @@
 import React from 'react';
-import { ShieldCheck, Mail } from 'lucide-react';
+import { useSelector } from 'react-redux';
+import { ShieldCheck, Mail, User } from 'lucide-react';
 
 const Users = () => {
-  // Mock data for Admin Users
-  const admins = [
-    { name: "Super Admin", email: "admin@hridayias.com", role: "Super Admin", lastLogin: "2 hours ago" },
-    { name: "Content Manager", email: "content@hridayias.com", role: "Editor", lastLogin: "1 day ago" },
-  ];
+  const { admin } = useSelector((state) => state.admin);
+
+  if (!admin) {
+    return <div className="p-6">Loading profile...</div>;
+  }
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-headline font-bold text-on-surface">Admin Users</h1>
-          <p className="text-on-surface-variant text-sm">Manage team access and permissions.</p>
+          <h1 className="text-2xl font-headline font-bold text-on-surface">Admin Profile</h1>
+          <p className="text-on-surface-variant text-sm">View and manage your account details.</p>
         </div>
-        <button className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium">
-          Add New Admin
-        </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {admins.map((admin, i) => (
-          <div key={i} className="bg-surface p-5 rounded-2xl border border-surface-variant shadow-soft flex items-start justify-between">
-            <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                <ShieldCheck size={24} />
-              </div>
-              <div>
-                <h4 className="font-bold text-on-surface">{admin.name}</h4>
-                <div className="flex items-center gap-2 text-sm text-on-surface-variant mt-1">
-                  <Mail size={14} /> {admin.email}
-                </div>
-                <div className="mt-3">
-                  <span className="text-[10px] font-bold uppercase tracking-wider bg-surface-variant px-2 py-1 rounded text-on-surface-variant">
-                    {admin.role}
-                  </span>
-                </div>
+      <div className="max-w-2xl bg-surface p-8 rounded-2xl border border-surface-variant shadow-soft">
+        <div className="flex flex-col md:flex-row items-center gap-8">
+          {/* Profile Icon/Avatar */}
+          <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center text-primary border-2 border-primary/20">
+            <User size={48} />
+          </div>
+
+          <div className="flex-1 space-y-4">
+            <div className="space-y-1">
+              <label className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Full Name</label>
+              <h3 className="text-xl font-bold text-on-surface">{admin.name}</h3>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Email Address</label>
+              <div className="flex items-center gap-2 text-on-surface">
+                <Mail size={18} className="text-primary" />
+                <span className="font-medium">{admin.email}</span>
               </div>
             </div>
-            <span className="text-xs text-on-surface-variant">Active {admin.lastLogin}</span>
+
+            <div className="pt-4 border-t border-surface-variant">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wide">
+                <ShieldCheck size={14} />
+                Administrator
+              </span>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

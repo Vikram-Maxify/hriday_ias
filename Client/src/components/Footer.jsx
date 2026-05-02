@@ -19,7 +19,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <p className="text-xs text-on-surface-variant">
-        © 2024 Hriday IAS. All rights reserved.
+        © 2025 Hriday IAS. All rights reserved.
       </p>
 
     </footer>

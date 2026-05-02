@@ -5,7 +5,7 @@ import { logoutAdmin } from "../../../reducer/slice/adminSlice";
 
 import {
     LayoutDashboard,
-    Users,
+    User,
     FileText,
     LogOut,
 } from "lucide-react";
@@ -17,8 +17,8 @@ const Sidebar = () => {
     // ✅ RELATIVE PATHS (BEST PRACTICE)
     const links = [
         { to: "dashboard", label: "Dashboard", icon: LayoutDashboard },
-        { to: "users", label: "Users", icon: Users },
         { to: "leads", label: "User Leads", icon: FileText },
+        { to: "users", label: "Profile", icon: User },
     ];
 
     const handleLogout = async () => {
