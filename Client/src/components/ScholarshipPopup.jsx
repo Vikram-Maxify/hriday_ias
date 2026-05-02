@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { createScholarship, resetState } from "../reducer/slice/scholarshipSlice"
+import { createScholarship, resetState } from "../reducer/slice/scholarshipSlice";
 
 const ScholarshipPopup = ({ isOpen, onClose }) => {
     const dispatch = useDispatch();
@@ -8,18 +8,17 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
 
     const [formData, setFormData] = useState({
         fullName: "",
-        whatsapp: "",
+        whatsappNumber: "",
         email: "",
-        location: "",
-        education: "",
-        attempt: "",
-        appeared: "",
+        currentLocation: "",
+        educationStatus: "",
+        upscAttemptTarget: "",
+        appearedBefore: "",
         medium: "",
         studyMode: "",
         reason: "",
     });
 
-    // Handle input
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -27,9 +26,10 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
         });
     };
 
-    // Submit via Redux (NO localStorage / cookies)
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        console.log(formData); // 🔍 debug
 
         const resultAction = await dispatch(createScholarship(formData));
 
@@ -37,15 +37,14 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
             dispatch(resetState());
             onClose();
 
-            // Reset form
             setFormData({
                 fullName: "",
-                whatsapp: "",
+                whatsappNumber: "",
                 email: "",
-                location: "",
-                education: "",
-                attempt: "",
-                appeared: "",
+                currentLocation: "",
+                educationStatus: "",
+                upscAttemptTarget: "",
+                appearedBefore: "",
                 medium: "",
                 studyMode: "",
                 reason: "",
@@ -67,46 +66,101 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
 
                 <form onSubmit={handleSubmit} className="space-y-4">
 
-                    <input name="fullName" value={formData.fullName} placeholder="Full Name" onChange={handleChange} className="w-full p-3 border rounded" required />
+                    <input
+                        name="fullName"
+                        value={formData.fullName}
+                        placeholder="Full Name"
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                        required
+                    />
 
-                    <input name="whatsapp" value={formData.whatsapp} placeholder="WhatsApp Number" onChange={handleChange} className="w-full p-3 border rounded" required />
+                    <input
+                        type="tel"
+                        name="whatsappNumber"
+                        value={formData.whatsappNumber}
+                        placeholder="WhatsApp Number"
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                        required
+                    />
 
-                    <input name="email" value={formData.email} placeholder="Email Address" onChange={handleChange} className="w-full p-3 border rounded" required />
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        placeholder="Email Address"
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                        required
+                    />
 
-                    <input name="location" value={formData.location} placeholder="City / State" onChange={handleChange} className="w-full p-3 border rounded" required />
+                    <input
+                        name="currentLocation"
+                        value={formData.currentLocation}
+                        placeholder="City / State"
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                        required
+                    />
 
-                    <select name="education" value={formData.education} onChange={handleChange} className="w-full p-3 border rounded">
+                    <select
+                        name="educationStatus"
+                        value={formData.educationStatus}
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                    >
                         <option value="">Educational Status</option>
-                        <option>Undergraduate (1st/2nd Year)</option>
-                        <option>Final Year Student</option>
-                        <option>Graduate</option>
-                        <option>Working Professional</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Final Year Student">Final Year Student</option>
+                        <option value="Graduate">Graduate</option>
+                        <option value="Working Professional">Working Professional</option>
                     </select>
 
-                    <select name="attempt" value={formData.attempt} onChange={handleChange} className="w-full p-3 border rounded">
+                    <select
+                        name="upscAttemptTarget"
+                        value={formData.upscAttemptTarget}
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                    >
                         <option value="">Target Attempt</option>
-                        <option>2027</option>
-                        <option>2028</option>
-                        <option>2029+</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029+">2029+</option>
                     </select>
 
-                    <select name="appeared" value={formData.appeared} onChange={handleChange} className="w-full p-3 border rounded">
+                    <select
+                        name="appearedBefore"
+                        value={formData.appearedBefore}
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                    >
                         <option value="">Appeared for Prelims?</option>
-                        <option>Yes</option>
-                        <option>No</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
                     </select>
 
-                    <select name="medium" value={formData.medium} onChange={handleChange} className="w-full p-3 border rounded">
+                    <select
+                        name="medium"
+                        value={formData.medium}
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                    >
                         <option value="">Medium</option>
-                        <option>English</option>
-                        <option>Hindi</option>
-                        <option>Hinglish</option>
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Hinglish">Hinglish</option>
                     </select>
 
-                    <select name="studyMode" value={formData.studyMode} onChange={handleChange} className="w-full p-3 border rounded">
+                    <select
+                        name="studyMode"
+                        value={formData.studyMode}
+                        onChange={handleChange}
+                        className="w-full p-3 border rounded"
+                    >
                         <option value="">Study Mode</option>
-                        <option>Online</option>
-                        <option>Offline</option>
+                        <option value="Online">Online</option>
+                        <option value="Offline">Offline</option>
                     </select>
 
                     <textarea
