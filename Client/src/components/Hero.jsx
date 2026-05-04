@@ -6,15 +6,6 @@ import { GraduationCap, BookOpen, ClipboardList } from "lucide-react";
 const Hero = () => {
   const [open, setOpen] = useState(false);
 
-  // Auto-open only if not filled before
-  useEffect(() => {
-    const saved = localStorage.getItem("hriday_ias_form");
-    if (!saved) {
-      const timer = setTimeout(() => setOpen(true), 4000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   return (
     <>
       <section
@@ -56,7 +47,7 @@ const Hero = () => {
             </p>
 
             {/* Stats */}
-            <div className="flex justify-center md:justify-start flex-wrap gap-6 mb-6">
+            <div className="grid grid-cols-3 justify-center md:justify-start flex-wrap gap-6 mb-6">
   {[
     { value: "500+", label: "Students" },
     { value: "50+", label: "Faculties" },
@@ -64,12 +55,12 @@ const Hero = () => {
   ].map((item, i) => (
     <div
       key={i}
-      className="flex flex-col items-center md:items-start bg-surface border border-accent/20 px-4 justify-center py-2 rounded-xl"
+      className="flex flex-col  items-center  bg-surface border border-accent/20 px-4 justify-center py-2 rounded-xl"
     >
       <span className="text-2xl md:text-3xl font-bold text-primary">
         {item.value}
       </span>
-      <span className="text-sm text-on-surface-variant">
+      <span className="text-sm  text-on-surface-variant">
         {item.label}
       </span>
     </div>
