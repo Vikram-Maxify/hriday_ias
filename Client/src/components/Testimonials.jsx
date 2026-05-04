@@ -5,61 +5,61 @@ const testimonials = [
   {
     name: "KULVEER KUMAR",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=12",
+    img: "https://i.ibb.co/pvDFx6S2/Kulveer.png",
     text: "I have had great experience at HRIDAY IAS. HRIDAY IAS IS REALLY 🫀 (HEART) OF EVERY UPSC ASPIRANT. The curriculum is exceptionally well-structured with clear phases for 1, 2, and 3 year programs. Faculty like Ankur Nain Sir and Ruksana Ma'am bring deep clarity and experience. Study materials and answer writing modules are top-notch. Highly recommended for serious aspirants."
   },
   {
     name: "Deepika Sharma",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=5",
+    img: "https://i.ibb.co/jmhChHD/deepika.png",
     text: "I have been at Hriday IAS for a few months now. The discipline is excellent — classes start on time, schedule is predictable, and tests are challenging. Teachers are very cooperative and approachable. It's a great mix of expert guidance and motivation."
   },
   {
     name: "Sweta Sharma",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=9",
+    img: "https://i.ibb.co/FLvWX3MY/Shweta.png",
     text: "I started my prep a bit late so I was worried, but the one year program is very systematic. Weekly tests and strict discipline keep you on track. Hriday IAS is for those ready to work hard."
   },
   {
     name: "Navneet Kumar",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=3",
+    img: "https://i.ibb.co/fG8gTYYv/navneet.png",
     text: "The study environment is quiet and professional. Notes are crisp and updated with current affairs. It's a serious place for serious UPSC aspirants."
   },
   {
     name: "6745_Pushpender",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=15",
+    img: "https://i.ibb.co/pBs2TT6g/pushpendar.png",
     text: "What I appreciate most is mentor accessibility. You're not just a roll number here. There's real focus on individual progress and clarity."
   },
   {
-    name: "alma Khatak",
+    name: "Salma Khatak",
     time: "A month ago",
-    img: "https://i.pravatar.cc/150?img=20",
+    img: "https://i.ibb.co/s9Q7K3wX/salma.png",
     text: "Great experience so far. Faculty is approachable and syllabus coverage is systematic. Unlike other coachings, you don't feel lost in a crowd."
   },
   {
     name: "NITESH TIWARI",
     time: "2 months ago",
-    img: "https://i.pravatar.cc/150?img=18",
+    img: "https://i.ibb.co/TxB3FsGc/image.png",
     text: "You will get everything required for UPSC preparation — best faculty, best environment, unique teaching style and one-on-one mentorship."
   },
   {
     name: "Pranav Prabhakar",
     time: "17 hours ago",
-    img: "https://i.pravatar.cc/150?img=11",
+    img: "https://i.ibb.co/NnQqTGPd/Pranav.png",
     text: "Great coaching institute. Faculty explains concepts clearly. Study material is well-structured and updated. Regular tests help track progress."
   },
   {
     name: "Sudhir",
     time: "a week ago",
-    img: "https://i.pravatar.cc/150?img=7",
+    img: "https://i.ibb.co/nM5Qgrpy/sudheer.png",
     text: "Maine Hriday IAS se mentorship li — experience kaafi achha raha. Mentors supportive hain aur guidance clear milti hai 👍"
   },
   {
     name: "Eklavya Institute Of Education",
     time: "1 Month ago",
-    img: "https://i.pravatar.cc/150?img=25",
+    img: "https://i.ibb.co/fGBfz1VT/Eklavya.png",
     text: "Staff and teachers are very polite and cooperative. Doubts are resolved quickly and seriously."
   }
 ];
