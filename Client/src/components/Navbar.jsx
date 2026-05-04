@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../assets/ImgLogoi.png";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -15,7 +16,14 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    const sections = ["hero", "scholarship", "faculty", "testimonials", "whyus", "location"];
+    const sections = [
+      "hero",
+      "scholarship",
+      "faculty",
+      "testimonials",
+      "whyus",
+      "location",
+    ];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -54,8 +62,13 @@ const Navbar = () => {
         <div className="max-w-[93rem] mx-auto w-full px-6 py-3 flex items-center justify-between">
 
           {/* Logo */}
-          <div className="text-xl font-headline font-extrabold tracking-tight text-primary cursor-pointer hover:scale-105 transition-transform">
-            Hriday IAS
+          <div className="cursor-pointer flex gap-2 items-center">
+            <img
+              src={Logo}
+              alt="Hriday IAS Logo"
+              className="h-10 w-auto object-contain"
+            />
+            <h1 className="font-bold text-2xl text-primary">Hriday IAS</h1>
           </div>
 
           {/* Desktop Nav */}
@@ -77,7 +90,6 @@ const Navbar = () => {
 
           {/* Right Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-
             <button className="text-primary font-body uppercase tracking-widest text-[11px] px-4 py-1.5 rounded-full border border-primary hover:bg-surface-variant transition-all">
               Check Eligibility
             </button>
@@ -103,7 +115,6 @@ const Navbar = () => {
           menuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-
         {/* Close Button */}
         <div className="flex justify-end p-4">
           <button

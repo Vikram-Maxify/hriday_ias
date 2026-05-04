@@ -58,11 +58,11 @@ const WhyUs = () => {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-on-surface mb-3">
+          <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary mb-3">
             Why Choose Hriday IAS?
           </h2>
 
-          <p className="text-on-surface-variant">
+          <p className="text-black">
             The intellectual sanctuary crafted for your UPSC journey.
           </p>
         </div>

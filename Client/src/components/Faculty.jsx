@@ -1,21 +1,21 @@
 import React, { useEffect, useRef } from "react";
 
 const facultyData = [
-  { name: "Dr. A. Sharma", subject: "History", exp: "10+ Years", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e" },
-  { name: "Ms. P. Verma", subject: "Polity", exp: "12+ Years", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
-  { name: "Mr. R. Kumar", subject: "Geography", exp: "8+ Years", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d" },
-  { name: "Dr. K. Singh", subject: "Ethics", exp: "15+ Years", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80" },
-  { name: "Mr. S. Mehta", subject: "Economics", exp: "9+ Years", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e" },
-  { name: "Dr. N. Rao", subject: "Science", exp: "11+ Years", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
+  { name: "Ruksana Ma'am", subject: "Ethics and Geoghraphy", exp: "4+ Years", img: "https://i.ibb.co/TBf1D5F5/1st-image.png" },
+  { name: "Rishabh Sharma Sir", subject: "Envirement & Ecology, IR, Current Affairs", exp: "6+ Years", img: "https://i.ibb.co/WNHLPw3Y/2nd-image.png" },
+  { name: "Chand Kubba Sir", subject: "Polity (GS & Optional),Economics, Internal Security", exp: "10+ Years", img: "https://i.ibb.co/tTZDtS5b/3rd-image.png" },
+  { name: "R.K Jha Sir", subject: "History (GS & Optional)", exp: "20+ Years", img: "https://i.ibb.co/Kzh8SDrZ/4th-image.png" },
+  { name: "Arvind Sir", subject: "CSAT ", exp: "15+ Years", img: "https://i.ibb.co/20Bw4QVM/5th-image.png" },
+  { name: "Ashok Singh Sir", subject: "Hindi Literature", exp: "22+ Years", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
 ];
 
 const FacultyCard = ({ item }) => (
   <div className="w-[85vw] md:w-[260px] shrink-0 snap-center bg-surface border border-accent/20 rounded-xl overflow-hidden shadow-soft hover:shadow-premium transition duration-300">
-    <img src={item.img} className="w-full h-56 object-cover" />
+    <img src={item.img} className="w-full h-96 object-cover" />
     <div className="p-4">
       <h3 className="font-headline font-bold text-primary">{item.name}</h3>
-      <p className="text-accent text-sm">{item.subject}</p>
-      <p className="text-xs text-on-surface-variant">{item.exp}</p>
+      <p className="text-black text-sm">{item.subject}</p>
+      <p className="text-xs text-on-surface-variant">{item.exp} Experience</p>
     </div>
   </div>
 );

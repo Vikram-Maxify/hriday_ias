@@ -52,8 +52,8 @@ const Contact = () => {
                 </h3>
                 <p className="text-on-surface-variant text-sm leading-relaxed">
                   A-78, Block-A, Sector 2, 
-                  Noida <br /> (Near Metro Station Sector 15 Exit Gate No. 3) -
-                  201301
+                  Noida ,<br />Metro Station Noida Sector 15, Exit Gate No. 3
+                  (201301)
                 </p>
               </div>
             </div>

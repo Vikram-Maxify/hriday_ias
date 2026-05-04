@@ -48,7 +48,7 @@ const Hero = () => {
                 Get Up to 100% Scholarship
               </span>
             </h1>
-
+ 
             {/* Description */}
             <p className="text-base text-on-surface-variant max-w-lg mx-auto md:mx-0 mb-6">
               Give the Scholarship Test & unlock exclusive discounts based on your
@@ -56,32 +56,24 @@ const Hero = () => {
             </p>
 
             {/* Stats */}
-         <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
+            <div className="flex justify-center md:justify-start flex-wrap gap-6 mb-6">
   {[
-    { icon: GraduationCap, label: "Mentorship" },
-    { icon: BookOpen, label: "Study Plan" },
-    { icon: ClipboardList, label: "Test Series" },
-  ].map((item, i) => {
-    const Icon = item.icon;
-
-    return (
-      <div
-        key={i}
-        className="flex items-center gap-2 
-        bg-surface border border-accent/20 
-        px-4 py-3 
-        rounded-2xl 
-        shadow-soft
-        min-w-[140px] justify-center"
-      >
-        <Icon size={16} className="text-primary stroke-[2]" />
-
-        <span className="text-xs font-medium text-on-surface-variant">
-          {item.label}
-        </span>
-      </div>
-    );
-  })}
+    { value: "500+", label: "Students" },
+    { value: "50+", label: "Faculties" },
+    { value: "20+", label: "Years Experience" },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="flex flex-col items-center md:items-start bg-surface border border-accent/20 px-4 justify-center py-2 rounded-xl"
+    >
+      <span className="text-2xl md:text-3xl font-bold text-primary">
+        {item.value}
+      </span>
+      <span className="text-sm text-on-surface-variant">
+        {item.label}
+      </span>
+    </div>
+  ))}
 </div>
 
             {/* Buttons */}
