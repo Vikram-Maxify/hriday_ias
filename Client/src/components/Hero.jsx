@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ScholarshipPopup from "./ScholarshipPopup";
+import { GraduationCap, BookOpen, ClipboardList } from "lucide-react";
 
 const Hero = () => {
   const [open, setOpen] = useState(false);
@@ -55,25 +56,33 @@ const Hero = () => {
             </p>
 
             {/* Stats */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-6">
-              {[
-                { value: "500+", label: "Selections" },
-                { value: "50+", label: "Top Ranks" },
-                { value: "15+", label: "Years Experience" },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-surface border border-accent/20 shadow-soft px-4 py-2 rounded-xl"
-                >
-                  <div className="text-xl font-bold text-primary">
-                    {item.value}
-                  </div>
-                  <div className="text-xs text-on-surface-variant">
-                    {item.label}
-                  </div>
-                </div>
-              ))}
-            </div>
+         <div className="flex justify-center md:justify-start flex-wrap gap-3 mb-6">
+  {[
+    { icon: GraduationCap, label: "Mentorship" },
+    { icon: BookOpen, label: "Study Plan" },
+    { icon: ClipboardList, label: "Test Series" },
+  ].map((item, i) => {
+    const Icon = item.icon;
+
+    return (
+      <div
+        key={i}
+        className="flex items-center gap-2 
+        bg-surface border border-accent/20 
+        px-4 py-3 
+        rounded-2xl 
+        shadow-soft
+        min-w-[140px] justify-center"
+      >
+        <Icon size={16} className="text-primary stroke-[2]" />
+
+        <span className="text-xs font-medium text-on-surface-variant">
+          {item.label}
+        </span>
+      </div>
+    );
+  })}
+</div>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3">
