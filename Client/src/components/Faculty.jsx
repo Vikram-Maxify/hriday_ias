@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 
 const facultyData = [
-  { name: "Ruksana Ma'am", subject: "Ethics and Geoghraphy", exp: "4+ Years", img: "https://i.ibb.co/TBf1D5F5/1st-image.png" },
-  { name: "Rishabh Sharma Sir", subject: "Envirement & Ecology, IR, Current Affairs", exp: "6+ Years", img: "https://i.ibb.co/WNHLPw3Y/2nd-image.png" },
-  { name: "Chand Kubba Sir", subject: "Polity (GS & Optional),Economics, Internal Security", exp: "10+ Years", img: "https://i.ibb.co/tTZDtS5b/3rd-image.png" },
-  { name: "R.K Jha Sir", subject: "History (GS & Optional)", exp: "20+ Years", img: "https://i.ibb.co/Kzh8SDrZ/4th-image.png" },
-  { name: "Arvind Sir", subject: "CSAT ", exp: "15+ Years", img: "https://i.ibb.co/20Bw4QVM/5th-image.png" },
-  { name: "Ashok Singh Sir", subject: "Hindi Literature", exp: "22+ Years", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330" },
+  { name: "Ruksana Ma'am", subject: "Ethics and Geoghraphy", exp: "4+ Years", img: "https://i.ibb.co/21sWpbNT/1st-image-1.png" },
+  { name: "Rishabh Sharma Sir", subject: "Envirement & Ecology, IR, Current Affairs", exp: "6+ Years", img: "https://i.ibb.co/pjkCtCQq/3rd-image.png" },
+  { name: "Chand Kubba Sir", subject: "Polity (GS & Optional),Economics, Internal Security", exp: "10+ Years", img: "https://i.ibb.co/1fnJKPY7/5th-image.png" },
+  { name: "R.K Jha Sir", subject: "History (GS & Optional)", exp: "20+ Years", img: "https://i.ibb.co/qYtVhtr7/4th-image.png" },
+  { name: "Arvind Sir", subject: "CSAT ", exp: "15+ Years", img: "https://i.ibb.co/7N2DFkBT/6th-image.png" },
+  { name: "Ashok Singh Sir", subject: "Hindi Literature", exp: "22+ Years", img: "https://i.ibb.co/ccrt2Ksr/2nd-image.png" },
 ];
 
 const FacultyCard = ({ item }) => (

@@ -3,28 +3,64 @@ import { FaStar } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Siddharth N.",
-    rank: "AIR 45, UPSC 2023",
-    img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    text: "Hriday IAS changed my preparation journey."
+    name: "KULVEER KUMAR",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=12",
+    text: "I have had great experience at HRIDAY IAS. HRIDAY IAS IS REALLY 🫀 (HEART) OF EVERY UPSC ASPIRANT. The curriculum is exceptionally well-structured with clear phases for 1, 2, and 3 year programs. Faculty like Ankur Nain Sir and Ruksana Ma'am bring deep clarity and experience. Study materials and answer writing modules are top-notch. Highly recommended for serious aspirants."
   },
   {
-    name: "Ananya P.",
-    rank: "AIR 112, UPSC 2023",
-    img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    text: "Scholarship made it possible for me."
+    name: "Deepika Sharma",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=5",
+    text: "I have been at Hriday IAS for a few months now. The discipline is excellent — classes start on time, schedule is predictable, and tests are challenging. Teachers are very cooperative and approachable. It's a great mix of expert guidance and motivation."
   },
   {
-    name: "Rajat K.",
-    rank: "AIR 234, UPSC 2022",
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-    text: "Answer writing focus changed everything."
+    name: "Sweta Sharma",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=9",
+    text: "I started my prep a bit late so I was worried, but the one year program is very systematic. Weekly tests and strict discipline keep you on track. Hriday IAS is for those ready to work hard."
   },
   {
-    name: "Neha S.",
-    rank: "AIR 89, UPSC 2023",
-    img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-    text: "Structured guidance gave me confidence."
+    name: "Navneet Kumar",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=3",
+    text: "The study environment is quiet and professional. Notes are crisp and updated with current affairs. It's a serious place for serious UPSC aspirants."
+  },
+  {
+    name: "6745_Pushpender",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=15",
+    text: "What I appreciate most is mentor accessibility. You're not just a roll number here. There's real focus on individual progress and clarity."
+  },
+  {
+    name: "alma Khatak",
+    time: "A month ago",
+    img: "https://i.pravatar.cc/150?img=20",
+    text: "Great experience so far. Faculty is approachable and syllabus coverage is systematic. Unlike other coachings, you don't feel lost in a crowd."
+  },
+  {
+    name: "NITESH TIWARI",
+    time: "2 months ago",
+    img: "https://i.pravatar.cc/150?img=18",
+    text: "You will get everything required for UPSC preparation — best faculty, best environment, unique teaching style and one-on-one mentorship."
+  },
+  {
+    name: "Pranav Prabhakar",
+    time: "17 hours ago",
+    img: "https://i.pravatar.cc/150?img=11",
+    text: "Great coaching institute. Faculty explains concepts clearly. Study material is well-structured and updated. Regular tests help track progress."
+  },
+  {
+    name: "Sudhir",
+    time: "a week ago",
+    img: "https://i.pravatar.cc/150?img=7",
+    text: "Maine Hriday IAS se mentorship li — experience kaafi achha raha. Mentors supportive hain aur guidance clear milti hai 👍"
+  },
+  {
+    name: "Eklavya Institute Of Education",
+    time: "1 Month ago",
+    img: "https://i.pravatar.cc/150?img=25",
+    text: "Staff and teachers are very polite and cooperative. Doubts are resolved quickly and seriously."
   }
 ];
 
@@ -34,7 +70,7 @@ const Card = ({ item }) => (
       <img src={item.img} className="w-12 h-12 rounded-full object-cover" />
       <div>
         <h4 className="font-bold text-primary text-sm">{item.name}</h4>
-        <p className="text-xs text-accent">{item.rank}</p>
+        <p className="text-xs text-accent">{item.time}</p>
       </div>
     </div>
 
