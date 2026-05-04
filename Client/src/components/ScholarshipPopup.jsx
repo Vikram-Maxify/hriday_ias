@@ -191,7 +191,7 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
                             <option value="">Select</option>
                             <option value="English">English</option>
                             <option value="Hindi">Hindi</option>
-                            <option value="Hinglish">Hinglish</option>
+                            <option value="Hinglish">Bilingual</option>
                         </select>
                     </div>
 
