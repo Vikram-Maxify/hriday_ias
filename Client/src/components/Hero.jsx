@@ -43,7 +43,7 @@ const Hero = () => {
             {/* Description */}
             <p className="text-base text-on-surface-variant max-w-lg mx-auto md:mx-0 mb-6">
               Give the Scholarship Test & unlock exclusive discounts based on your
-              rank. Join aspirants who achieved IAS, IPS, and top civil services.
+              rank. Join our community of dedicated UPSC aspirants and start your journey to success.
             </p>
 
             {/* Stats */}
@@ -83,7 +83,7 @@ const Hero = () => {
     href="#location"
     className="w-full sm:w-auto text-center border border-primary text-primary px-6 py-3 rounded-full hover:bg-surface-variant transition"
   >
-    Check Eligibility
+    Contact Us for any Querry
   </a>
 
 </div>
