@@ -55,7 +55,7 @@ const Faculty = () => {
   }, []);
 
   return (
-    <section className="py-8 px-4 bg-background">
+    <section id="faculty" className="py-8 px-4 bg-background">
       <div className="max-w-[93rem] mx-auto">
 
         {/* Heading */}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const testimonials = [
@@ -64,27 +64,47 @@ const testimonials = [
   }
 ];
 
-const Card = ({ item }) => (
-  <div className="w-[90vw] md:w-[320px] shrink-0 snap-center bg-surface border border-accent/20 rounded-xl p-5 shadow-soft">
-    <div className="flex items-center gap-3 mb-3">
-      <img src={item.img} className="w-12 h-12 rounded-full object-cover" />
-      <div>
-        <h4 className="font-bold text-primary text-sm">{item.name}</h4>
-        <p className="text-xs text-accent">{item.time}</p>
+const Card = ({ item }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  const LIMIT = 120;
+  const isLong = item.text.length > LIMIT;
+
+  const displayText = expanded
+    ? item.text
+    : item.text.slice(0, LIMIT) + (isLong ? "..." : "");
+
+  return (
+    <div id="testimonials" className="w-[90vw] md:w-[320px] shrink-0 snap-center bg-surface border border-accent/20 rounded-xl p-5 shadow-soft">
+      <div className="flex items-center gap-3 mb-3">
+        <img src={item.img} className="w-12 h-12 rounded-full object-cover" />
+        <div>
+          <h4 className="font-bold text-primary text-sm">{item.name}</h4>
+          <p className="text-xs text-accent">{item.time}</p>
+        </div>
       </div>
-    </div>
 
-    <div className="flex text-accent mb-2">
-      {[...Array(5)].map((_, i) => (
-        <FaStar key={i} className="text-xs" />
-      ))}
-    </div>
+      <div className="flex text-accent mb-2">
+        {[...Array(5)].map((_, i) => (
+          <FaStar key={i} className="text-xs" />
+        ))}
+      </div>
 
-    <p className="text-on-surface-variant text-sm italic">
-      "{item.text}"
-    </p>
-  </div>
-);
+      <p className="text-on-surface-variant text-sm italic">
+        "{displayText}"
+      </p>
+
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="text-xs text-primary mt-2 font-medium underline"
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+};
 
 const Testimonials = () => {
   const scrollRef = useRef(null);
@@ -100,7 +120,6 @@ const Testimonials = () => {
             behavior: "smooth",
           });
 
-          // loop back
           if (
             scrollRef.current.scrollLeft +
               scrollRef.current.clientWidth >=
@@ -121,7 +140,6 @@ const Testimonials = () => {
     <section className="py-8 px-4 bg-background">
       <div className="max-w-[93rem] mx-auto">
 
-        {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="font-headline text-3xl font-extrabold text-on-surface">
             Success Stories of Our Students
@@ -131,10 +149,8 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Scroll */}
         <div className="relative overflow-hidden">
 
-          {/* Desktop fade */}
           <div className="hidden md:block absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
           <div className="hidden md:block absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
 

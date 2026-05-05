@@ -50,8 +50,8 @@ const Hero = () => {
             <div className="grid grid-cols-3 justify-center md:justify-start flex-wrap gap-6 mb-6">
   {[
     { value: "500+", label: "Students" },
-    { value: "50+", label: "Faculties" },
-    { value: "20+", label: "Years Experience" },
+    { value: "50+", label: "Experts" },
+    { value: "15+", label: "Years Experience" },
   ].map((item, i) => (
     <div
       key={i}
@@ -70,19 +70,23 @@ const Hero = () => {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3">
 
-              {/* 🔥 MAIN CTA (opens popup) */}
-              <button
-                onClick={() => setOpen(true)}
-                className="bg-primary text-white font-bold px-6 py-3 rounded-full shadow-button hover:scale-105 transition"
-              >
-                Register for Scholarship Test
-              </button>
+  {/* MAIN CTA */}
+  <button
+    onClick={() => setOpen(true)}
+    className="w-full sm:w-auto bg-primary text-white font-bold px-6 py-3 rounded-full shadow-button hover:scale-105 transition"
+  >
+    Register for Scholarship Test
+  </button>
 
-              <button className="border border-primary text-primary px-6 py-3 rounded-full hover:bg-surface-variant transition">
-                Check Eligibility
-              </button>
+  {/* Check Eligibility */}
+  <a
+    href="#location"
+    className="w-full sm:w-auto text-center border border-primary text-primary px-6 py-3 rounded-full hover:bg-surface-variant transition"
+  >
+    Check Eligibility
+  </a>
 
-            </div>
+</div>
           </div>
 
           {/* RIGHT IMAGE */}

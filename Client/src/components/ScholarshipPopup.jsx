@@ -72,7 +72,7 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-2">
             <div className="bg-surface rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-premium">
 
                 <h2 className="text-2xl font-headline text-primary mb-6">

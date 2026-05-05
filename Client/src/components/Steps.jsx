@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const steps = [
   { title: "Register", desc: "Sign up for the upcoming scholarship test online." },
-  { title: "Take Exam", desc: "Appear for the test online or at our offline center." },
+  { title: "Take Exam", desc: "Appear for the test at our offline center." },
   { title: "Get Rank", desc: "Receive your detailed performance analysis and rank." },
   { title: "Unlock Scholarship", desc: "Claim your fee waiver and start your UPSC preparation." },
 ];
@@ -55,7 +55,7 @@ const Steps = () => {
                         : ""
                       }`}
                   >
-                    <h3 className="font-headline text-lg font-bold text-primary mb-1">
+                    <h3 className="font-headline text-lg font-bold text-primary pt-3 mb-1">
                       {i + 1}. {step.title}
                     </h3>
 
