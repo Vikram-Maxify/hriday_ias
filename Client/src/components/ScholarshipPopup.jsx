@@ -76,7 +76,7 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
             <div className="bg-surface rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-premium">
 
                 <h2 className="text-2xl font-headline text-primary mb-6">
-                    Scholarship Application Form
+                    Scholarship Application Form 
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
