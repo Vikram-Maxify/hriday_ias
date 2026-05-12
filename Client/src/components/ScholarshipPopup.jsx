@@ -10,14 +10,6 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
         fullName: "",
         whatsappNumber: "",
-        email: "",
-        currentLocation: "",
-        educationStatus: "",
-        upscAttemptTarget: "",
-        appearedBefore: "",
-        medium: "",
-        studyMode: "",
-        reason: "",
     });
 
     const handleChange = (e) => {
@@ -35,7 +27,6 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
         if (createScholarship.fulfilled.match(resultAction)) {
             dispatch(resetState());
 
-            // ✅ SAVE TO LOCALSTORAGE (important)
             localStorage.setItem("hriday_ias_form", "submitted");
 
             Swal.fire({
@@ -50,14 +41,6 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
             setFormData({
                 fullName: "",
                 whatsappNumber: "",
-                email: "",
-                currentLocation: "",
-                educationStatus: "",
-                upscAttemptTarget: "",
-                appearedBefore: "",
-                medium: "",
-                studyMode: "",
-                reason: "",
             });
 
         } else {
@@ -76,14 +59,17 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
             <div className="bg-surface rounded-xl p-6 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-premium">
 
                 <h2 className="text-2xl font-headline text-primary mb-6">
-                    Scholarship Application Form 
+                    Scholarship Application Form
                 </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
 
                     {/* Full Name */}
                     <div>
-                        <label className="text-sm font-medium mb-1 block">Full Name</label>
+                        <label className="text-sm font-medium mb-1 block">
+                            Full Name
+                        </label>
+
                         <input
                             name="fullName"
                             value={formData.fullName}
@@ -95,24 +81,14 @@ const ScholarshipPopup = ({ isOpen, onClose }) => {
 
                     {/* WhatsApp */}
                     <div>
-                        <label className="text-sm font-medium mb-1 block">WhatsApp Number</label>
+                        <label className="text-sm font-medium mb-1 block">
+                            WhatsApp Number
+                        </label>
+
                         <input
                             type="tel"
                             name="whatsappNumber"
                             value={formData.whatsappNumber}
-                            onChange={handleChange}
-                            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary/40"
-                            required
-                        />
-                    </div>
-
-                    {/* Email */}
-                    <div>
-                        <label className="text-sm font-medium mb-1 block">Email Address</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
                             onChange={handleChange}
                             className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary/40"
                             required

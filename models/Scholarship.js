@@ -4,7 +4,6 @@ const scholarshipSchema = new mongoose.Schema(
   {
     fullName: { type: String,required: true },
     whatsappNumber: { type: String,  },
-    email: { type: String,  },
 
   },
   { timestamps: true }

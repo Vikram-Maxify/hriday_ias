@@ -173,9 +173,6 @@ const UserLeads = () => {
                                         </td>
 
                                         {/* EMAIL */}
-                                        <td className="px-6 py-4">
-                                            {lead.email}
-                                        </td>
 
                                         {/* NUMBER */}
                                         <td className="px-6 py-4">
