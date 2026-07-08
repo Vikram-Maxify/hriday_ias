@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 const ScholarshipPopup = ({ isOpen, onClose }) => {
     const dispatch = useDispatch();
     const { loading } = useSelector((state) => state.scholarship);
-
     const [formData, setFormData] = useState({
         fullName: "",
         whatsappNumber: "",
